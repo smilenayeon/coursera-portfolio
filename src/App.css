@@ -1,0 +1,62 @@
+
+.MainPage{
+    background-color: rgb(199, 112, 199);
+    height:100vh;
+    font-weight: bold;
+    font-family: 2rem;
+    
+}
+
+.MainContent{
+display:flex;
+justify-content: center;
+align-items: center;
+padding-top:3%;
+   
+    
+}
+
+.centerContent{
+text-align: center;
+}
+.ProfilePic{
+    height:25%;
+    border-radius: 50%;
+}
+
+.HeaderContainer{
+    background-color: rgb(1, 1, 53);
+    color:white;
+    display:flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding:5%;
+    height:1vh;
+    
+}
+
+.HeaderLogoLinks, .HeaderWordLinks{
+    display: flex;
+    gap:2rem;
+}
+
+.logoLink {
+    height:3rem;
+    border-radius: 10%;
+}
+
+
+.projectsContainer{
+    background-color: green;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
+  gap: 1%; 
+  padding:3%;
+}
+
+.cardContainer {
+    text-align: center;
+    border: 3px solid grey;
+   
+}
