@@ -32,6 +32,7 @@ text-align: center;
     align-items: center; 
     padding:5%;
     height:1vh;
+ 
     
 }
 
@@ -46,17 +47,97 @@ text-align: center;
 }
 
 
-.projectsContainer{
-    background-color: green;
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr); 
-  gap: 1%; 
-  padding:3%;
-}
+.projectsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+    gap: 20px; /* Adjust the gap as needed */
+    padding: 20px; /* Add padding for the container */
+    background-color: darkgreen;
+    color:white;
 
-.cardContainer {
-    text-align: center;
-    border: 3px solid grey;
+  }
+  
+  .Card {
+    width: 100%;
+  min-height: 300px; 
+  display: flex;
+  flex-direction: column;
+  border-radius: 5%;
+  background-color: aliceblue;
+  color:black;
+  }
+  
+  .cardImage {
+    width: 100%; 
+    height: 14rem; 
+    object-fit: cover; 
+    border-radius:6%;
+    
+  }
+  
+  .cardLetters{
+    margin:3%;
+  }
+
+  .cardLetters h3 {
+    font-size: 1.5rem;
+  
+  }
+  
+  .cardLetters p {
+    font-size: 1rem;
+    
+  }
+  
+  .cardLetters p:last-child {
+    font-weight: bold;
    
-}
+  }
+
+  .Contact{
+    background-color: rgb(62, 0, 128);
+    padding:5%;
+    color:white;
+   
+    
+  }
+
+  .Contact h1 {
+    margin-top:0;
+  }
+
+  form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+   
+  }
+  form label,input,select, button{
+    width:80%;
+    margin:0.5rem;
+  }
+
+  form input,select{
+    height:1.5rem;
+  }
+
+ form textarea{
+  width: 80%;
+  height: 10rem; 
+  resize: vertical;
+  overflow-y: scroll; 
+    
+    
+  }
+
+  form button{
+    margin:1%;
+    height:2rem;
+    background-color: blueviolet;
+    font-weight: bold;
+    color:white;
+   
+  }

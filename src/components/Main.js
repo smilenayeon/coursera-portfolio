@@ -1,12 +1,34 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route,Link } from 'react-router-dom';
-import Contact from './Contact';
+import React,{useRef} from 'react'
 import Project from './Project';
+import Contact from './Contact';
+
+
 
 
 function Main() {
+
+  const scrollRef1 = useRef(null);
+  const scrollRef2 = useRef(null);
+
+
+  const scrollToComponent1 = () => {
+    if (scrollRef1.current) {
+      scrollRef1.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+ 
+  const scrollToComponent2 = () => {
+    if (scrollRef2.current) {
+      scrollRef2.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
+
+
   return (
-    <BrowserRouter>
+
 
     <div>
     <div className="MainPage">
@@ -26,12 +48,8 @@ function Main() {
           </a>
         </div>
         <div className="HeaderWordLinks">
-        <nav>
-       
-        <Link to="/project">Project</Link>
-        <Link to="/Contact">Contact</Link>
-        </nav>
-       
+       <h3 onClick={scrollToComponent1} >Project</h3>
+       <h3 onClick={scrollToComponent2} >Contact</h3>
        
         </div>
       </div>
@@ -50,16 +68,15 @@ function Main() {
       
       
     </div>
-    
-
+    <div ref={scrollRef1}>
+        <Project />
+      </div>
+      <div ref={scrollRef2}>
+        <Contact />
+      </div>
+  
     </div>
-    <Routes>
-    
-    
-        <Route path="/project" element={<Project/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
-       </Routes>
-    </BrowserRouter>
+
   )
 }
 
